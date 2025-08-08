@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\DemoEvent;
 use Illuminate\Http\Request;
 
 class DemoController extends Controller
@@ -19,7 +20,9 @@ class DemoController extends Controller
      */
     public function create()
     {
-        //
+        // dd("create");
+        event(new DemoEvent('message pushed at ' . now('Asia/Kolkata')));
+        return view("welcome");
     }
 
     /**
@@ -35,7 +38,7 @@ class DemoController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**

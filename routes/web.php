@@ -9,5 +9,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get("/", [DemoController::class, "index"])->name("home");
+Route::post("/create", [DemoController::class,"create"])->name("create");
 
 Broadcast::routes([''=> '']);
