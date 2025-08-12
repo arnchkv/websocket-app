@@ -24,6 +24,11 @@
             .listen('DemoEvent', (e) => {
                 console.log(e.message);
             })
+
+        window.Echo.channel('conversation-channel')
+            .listen('ConversationEvent', (e) => {
+                console.log(e.conversation);
+            })
     }, 200);
 </script>
 
