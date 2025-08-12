@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('message');
             $table->string('attachment');
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
