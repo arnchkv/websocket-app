@@ -22,7 +22,7 @@ class DemoController extends Controller
     {
         // dd("create");
         event(new DemoEvent('message pushed at ' . now('Asia/Kolkata')));
-        return view("welcome");
+        return view("demo");
     }
 
     /**
